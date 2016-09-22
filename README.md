@@ -27,7 +27,7 @@ fccnotify -frn <your frn>
 
 `fccnotify -frn <your frn> [-m <minutes>] [-gmailaddr] [-gmailpass]`
 
-* `-frn`, _*required*_, your FCC FRN
+* `-frn`, **_required_**, your FCC FRN
 * `-m`, _optional_, check the fcc database every x minutes, minimum is 30
 * `-gmailaddr`, _optional_, your gmail e-mail address
 * `-gmailpass`, _optional_, your gmail password
