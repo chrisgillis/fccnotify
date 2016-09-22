@@ -131,7 +131,7 @@ func main() {
 
 		resp.Body.Close()
 
-		time.Sleep(time.Second * time.Duration(*interval))
+		time.Sleep(time.Minute * time.Duration(*interval))
 	}
 	
 }
