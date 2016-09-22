@@ -9,7 +9,7 @@ I recommend installing via docker.
 #### via Docker
 
 ```
-docker run -d -e="frn=x" -e="gmailaddr=x" -e "gmailpass=x" --restart always gillisct/fccnotify
+docker run -d -e "frn=x" -e "gmailaddr=x" -e "gmailpass=x" --restart always gillisct/fccnotify
 ```
 
 #### via Source
