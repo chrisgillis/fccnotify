@@ -27,10 +27,10 @@ fccnotify -frn <your frn>
 
 `fccnotify -frn <your frn> [-m <minutes>] [-gmailaddr] [-gmailpass]`
 
-`-frn`, required, your FCC FRN
-`-m`, optional, check the fcc database every x minutes, minimum is 30
-`-gmailaddr`, optional, your gmail e-mail address
-`-gmailpass`, optional, your gmail password
+* `-frn`, required, your FCC FRN
+* `-m`, optional, check the fcc database every x minutes, minimum is 30
+* `-gmailaddr`, optional, your gmail e-mail address
+* `-gmailpass`, optional, your gmail password
 
 Run the command without the gmail options and it will log to console when your callsign is ready.
 
