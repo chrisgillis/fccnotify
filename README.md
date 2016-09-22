@@ -2,21 +2,41 @@
 
 fccnotify helps new hams know when their callsign is ready
 
+### Installation
 
-### usage
+I recommend installing via docker.
 
+#### via Docker
+
+```
+docker run -d -e="frn=x" -e="gmailaddr=x" -e "gmailpass=x" --restart always gillisct/fccnotify
+```
+
+#### via Source
+
+You must have Golang installed on your system.
+
+```
+git clone https://github.com/chrisgillis/fccnotify.git
+cd fccnotify
+go install
 fccnotify -frn <your frn>
+```
 
-if you want an e-mail notification you'll need a gmail account
+### Usage
 
-turn on access for less secure apps in your gmail settings:
-https://www.google.com/settings/u/1/security/lesssecureapps
+`fccnotify -frn <your frn> [-m <minutes>] [-gmailaddr] [-gmailpass]`
 
-fccnotify -frn <your frn> -gmailaddr <gmail email address> -gmailpass <gmail password>
+`-frn`, required, your FCC FRN
+`-m`, optional, check the fcc database every x minutes, minimum is 30
+`-gmailaddr`, optional, your gmail e-mail address
+`-gmailpass`, optional, your gmail password
 
-### interval
+Run the command without the gmail options and it will log to console when your callsign is ready.
 
-the command will check the fcc database every 30 minutes by default. you can increase the time interval with `-m <minutes>` but it cannot be less than 30. It's pointless to check more quickly than that anyway.
+If you want it to notify you via e-mail, you'll need a [Gmail](http://www.gmail.com/) account.
+
+Make sure you [turn on access for less secure apps](https://www.google.com/settings/u/1/security/lesssecureapps) in your gmail settings.
 
 ### License
 
